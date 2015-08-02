@@ -42,7 +42,7 @@ int cst_hash_create_node(cst_hash * hs, const char * identify, int vcount){
 	char item[256] = {0};
 	for (int i = 0; i< vcount; i++){
 
-		sprintf(item, "%s%d", identify, i);
+		sprintf(item, "%s#%d", identify, i);
 		int hash = ap_hash(item);
 		if(util_rbtree_search(hs,hash)){
 			continue;
